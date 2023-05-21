@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 10px 30px;
+}
+
+.line {
+  width: 180px;
+  background: #6c2fff;
+  border-radius: 4px;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 2px 0px;
+}

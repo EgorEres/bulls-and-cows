@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.block {
+  margin-bottom: 300px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.playBtn {
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  background: #341974;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background: #5930b8;
+  }
+
+  &:active {
+    background: #200e30;
+  }
+}

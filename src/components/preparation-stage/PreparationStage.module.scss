@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/lot-of-bulls.png');
+  background-position-y: bottom;
+  background-size: cover;
+}

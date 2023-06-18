@@ -8,4 +8,3 @@ export default function History() {
     {history.map((line) => <div className={styles.line}>{line}</div>)}
   </div>
 }
-

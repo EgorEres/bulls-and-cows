@@ -5,16 +5,19 @@
 .gameplayBlock {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin: 20px 10%;
   align-items: center;
+  gap: 10px;
+  margin: 10px 0 30px;
+  user-select: none;
 }
 
 .checkBtn {
-  padding: 10px 30px;
-  border-radius: 10px;
+  width: calc(100% - 32px);
+  padding: 14px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
   background: #341974;
   color: #fff;
   cursor: pointer;
@@ -33,21 +36,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 40px;
 }
 
 .count {
-  font-size: 80px;
+  font-size: 40px;
   font-family: monospace;
-  margin-right: 20px;
 }
 
 .bullImage {
-  height: 160px;
+  height: 90px;
+  padding-right: 20px;
 }
 
 .cawImage {
-  height: 90px;
-  padding: 0 32px;
+  height: 45px;
+  padding-left: 6px;
 }
 
 

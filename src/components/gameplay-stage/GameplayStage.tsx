@@ -37,7 +37,7 @@ function GameplayStage({ setNextStage }: GameplayStageProps) {
       }
     }
     upHerd({ bulls, cows })
-    addHistory(`${tryCount} - Bulls: ${bulls} Cows: ${cows} (${numbers.join('')})`)
+    addHistory(`Попытка: ${tryCount}. Быков: ${bulls}; Коров: ${cows}; Числа: ${numbers.join('')}`)
 
     if(bulls === 6) {
       setNextStage()
@@ -50,8 +50,6 @@ function GameplayStage({ setNextStage }: GameplayStageProps) {
       <div className={styles.imgWrap}>
         <span className={styles.count}>{herd.bulls}</span>
         <img className={styles.bullImage} src='/bull.png' />
-      </div>
-      <div className={styles.imgWrap}>
         <span className={styles.count}>{herd.cows}</span>
         <img className={styles.cawImage} src='/caw.png' />
       </div>
@@ -60,7 +58,7 @@ function GameplayStage({ setNextStage }: GameplayStageProps) {
       </div>
 
       <button className={styles.checkBtn} onClick={handleCheck}>
-        Проверить
+        ПРОВЕРИТЬ
       </button>
 
       <History />

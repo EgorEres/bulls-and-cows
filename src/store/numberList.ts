@@ -35,7 +35,7 @@ const useNumberListStore = create<NumberListState>((set) => ({
     return { numbers: newNumbers }
   }),
   addHistory: (line) => set((state) => {
-    return { history: [...state.history, line], tryCount: state.tryCount + 1 }
+    return { history: [line, ...state.history], tryCount: state.tryCount + 1 }
   }),
   reset: () => set({
     numbers: [],

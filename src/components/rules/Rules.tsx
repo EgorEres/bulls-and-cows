@@ -6,10 +6,11 @@ const Rules = memo(() => {
   const [open, setOpen] = useState(false)
 
   return <div className={styles.wrapper}>
-    <button className={styles.ruleBtn} onClick={() => setOpen((prev) => !prev)}>Правила</button>
+    <button className={styles.ruleBtn} onClick={() => setOpen((prev) => !prev)}>!</button>
 
     {open && <div className={styles.modal} onClick={() => setOpen((prev) => !prev)}>
       <div className={styles.rules}>
+        <h3>Правила</h3>
         <p>Вам необходимо узнать секретное значение - последовательность из 6 чисел</p>
         <p>Выставите значение и нажимаете кнопку проверить</p>
         <p>Количество быков означает количество правильно угаданных цифр в правильном месте</p>

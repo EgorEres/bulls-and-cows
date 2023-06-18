@@ -10,8 +10,13 @@
   font-size: 20px;
   font-weight: bold;
   background: transparent;
-  border: none;
+  border: 2px solid #341974;
   cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
   &:hover {
     color: #5930b8;
   }
@@ -21,23 +26,19 @@
   position: fixed;
   right: 0;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;;
+  height: 100%;
 }
 
 .rules {
-  width: 600px;
-  margin-bottom: 30%;
+  margin: 16px;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 25px 3px #100a20;
-  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 1px 2px 10px #100a20;
+  padding: 20px 20px 40px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: 18px;
+  font-size: .9em;
   font-family: sans-serif;
+  text-align: left;
 }

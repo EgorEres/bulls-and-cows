@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, KeyboardEvent } from "react";
 import useNumberListStore from "../../store/numberList";
 import styles from './Counter.module.scss'
 
@@ -12,7 +12,7 @@ export default function Counter({number, index}: CounterProps) {
 
   const handleChangeNumber = useCallback((up?: boolean) => {
     if(up && number === 9) {
-      updateNumber(index, 0) 
+      updateNumber(index, 0)
     } else if(!up && number === 0) {
       updateNumber(index, 9)
     } else {
@@ -20,9 +20,21 @@ export default function Counter({number, index}: CounterProps) {
     }
   }, [updateNumber, index, number])
 
+  const handleKeydown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if(!isNaN(Number(e.key))) {
+      const num = e.key === '0' ? 0 : Math.abs(Number(e.key))
+      updateNumber(index, num)
+    }
+  }
+
   return <div className={styles.counterWrapper}>
     <button className={`${styles.up} ${styles.arrow}`} onClick={() => handleChangeNumber(true)} />
-    <span className={styles.int}>{number}</span>
+    <input
+      className={styles.int}
+      value={number}
+      pattern="\d*"
+      onKeyDown={handleKeydown}
+    />
     <button className={`${styles.down} ${styles.arrow}`} onClick={() => handleChangeNumber()} />
   </div>
 }
